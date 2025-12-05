@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./web/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./web/style.css">
+    <title>Generic's Image Gallery</title>
+</head>
+<body>
+    <header>
+        <h1>Generic/Gian's Image Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">🏠Home</a></li>
+                <li><a href="about.html">📋About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="title">Random Photos I've Taken</h1>
+    
+    <div class="imageShow hidden">
+        <button class="btnClose hidder">✖</button>
+        <figure id="imgViewer">
+            <a href="" target="_blank" rel="noopener noreferrer" class="linker">
+                <img src="" alt="" srcset="" class="mainPic">
+            </a>
+            <figcaption>
+                <h2 class="title"></h2>
+                <p class="description"></p>
+            </figcaption>
+        </figure>
+        <div class="control">
+            <h3 class="prev">◀Previous</h3>
+            <h3 class="next">Next▶</h3>
+        </div>
+    </div>
+
+    <section class="imgCont">
+        <template id="image">
+            <figure class="imageBox">
+                <img src="" alt="" class="imgA">
+                <figcaption class="cap"></figcaption>
+            </figure>
+        </template>
+        
+    </section>
+
+    
+
+    <footer>
+
+    </footer>
+    <script src="./web/scripts.js"></script>
+</body>
+</html>

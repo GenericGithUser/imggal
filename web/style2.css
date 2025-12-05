@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+
+.active {
+    background-color: rgb(6, 131, 6);
+    padding: 3px;
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(44, 35, 22);
+    color: rgb(230, 208, 179);
+}
+
+header {
+    display: flex;
+    padding: 18px;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 4;
+
+}
+
+header>nav {
+    width: 25%;
+}
+
+header>nav>ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+header>nav>ul>li>a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 2ch;
+}
+
+.question{
+    margin-top: 20px;
+    text-align: center;
+}
+.originalAbout{
+    width: 90%;
+    margin-top: 20px !important;
+    margin: auto;
+    
+}
+.originalAbout > p{
+    background-color: rgb(119, 97, 67);
+    border-left: 10px solid rgb(165, 116, 42);
+    padding: 10px;
+}
+
+.main2{
+    text-align: center;
+
+}
+.main2 > h1>  a{
+    color: rgb(207, 136, 42);
+    
+}
+.main2 > img{
+    width: 50%;
+    border: 10px double;
+}
