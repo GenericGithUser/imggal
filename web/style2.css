@@ -77,3 +77,19 @@ header>nav>ul>li>a {
     width: 50%;
     border: 10px double;
 }
+@media only screen and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    header > nav{
+        margin-top: 30px;
+        width: 100%;
+        font-size: 2ch;
+    }
+    .main2 > img{
+    width: 95%;
+    border: 10px double;
+}
+}

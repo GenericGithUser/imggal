@@ -60,10 +60,10 @@ header > nav > ul > li > a{
 .imgCont{
     display: flex;
     flex-wrap: wrap;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 90%;
+    width: 85%;
     margin: auto;
     margin-top: 40px;
     z-index: 1;
@@ -108,7 +108,9 @@ header > nav > ul > li > a{
 
 .imageShow > figure{
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns: 2fr 1.5fr;
+    justify-items: center;
+    gap: 10px;
     padding: 10px;
     margin: auto;
     width: 90%;
@@ -132,6 +134,7 @@ header > nav > ul > li > a{
     margin: auto;
     justify-content: space-between;
     user-select: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .imageShow > .control > h3{
@@ -153,5 +156,70 @@ header > nav > ul > li > a{
     font-weight: bolder;
 }
 
+@media only screen and (max-width: 1024px){
+    header{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    header > nav{
+        margin-top: 30px;
+        width: 100%;
+        font-size: 2ch;
+    }
+    .imgCont{
+        width: 98%;
+        
+    }
+    .imgCont>.imageBox{
+        width: 30vw;
+    }
+    .imgCont>.imageBox>.imgA{
+        width: 26vw;
+    }
+    .imageShow>figure>a>img{
+        max-width: 100%;
+        max-height: 70vh;
+        
+    }
+}
 
-/*TODO: MOBILE FIX*/
+@media only screen and (max-width: 600px){
+    .imgCont>.imageBox{
+        width: 50vw;
+        height: 40vh;
+    }
+    .imgCont>.imageBox>.imgA{
+        width: 44vw;
+    }
+
+    .imgCont>.imageBox > .cap{
+        font-size: 1.5ch;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .imgCont>.imageBox{
+        width: 60vw;
+    }
+    .imgCont>.imageBox>.imgA{
+        width: 54vw;
+        height: 25vh;
+    }
+
+    .imgCont>.imageBox > .cap{
+        font-size: 1.4ch;
+    }
+
+    .imageShow{
+        height: 100vh;
+    }
+    .imageShow>figure{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .imageShow>figure>a>img{
+        max-height: 50vh;
+    }
+}
