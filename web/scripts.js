@@ -154,6 +154,30 @@ const photoData = [
         image: "./web/imgs/P (26).jpg",
         caption: "Clouds behind bars",
         thumb: "./web/imgs/thumb/P (26).jpg",
+    },
+    {
+        title: "Sunset",
+        image: "./web/imgs/P (27).jpg",
+        caption: "Sunset taken from the vantage of my home",
+        thumb: "./web/imgs/thumb/P (27).jpg",
+    },
+    {
+        title: "Bambang from Doroteo Jose",
+        image: "./web/imgs/P (28).jpg",
+        caption: "A Picture I took while commuting to my uni on an overcast day",
+        thumb: "./web/imgs/thumb/P (28).jpg",
+    },
+    {
+        title: "Reverie - PUP Main East Wing",
+        image: "./web/imgs/P (29).jpg",
+        caption: "A Photo I took after finishing my 1st day of finals, it is taken from the East Wing Overlooking the PUP Ferry Station and Pasig River",
+        thumb: "./web/imgs/thumb/P (29).jpg",
+    },
+    {
+        title: "Balintawak Market - Early Evening",
+        image: "./web/imgs/P (30).jpg",
+        caption: "A Photo I took during my commute home of the Balintawak Market overlooking Super 8 and a famous condominium that is also visible from my home",
+        thumb: "./web/imgs/thumb/P (30).jpg",
     }
     
 ];
@@ -247,4 +271,17 @@ prevBtn.addEventListener("click", ()=>{
 
     console.log("clicked-");
     
+});
+
+
+const goUpBtn = document.querySelector('.buttonUp');
+const visThreshold = 100;
+
+window.addEventListener('scroll', ()=>{
+    if (window.pageYOffset > visThreshold || document.documentElement.scroll > visThreshold) {
+        goUpBtn.classList.remove("hidder");        
+    }
+    else{
+        goUpBtn.classList.add("hidder");
+    }
 });
