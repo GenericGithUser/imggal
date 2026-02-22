@@ -178,6 +178,12 @@ const photoData = [
         image: "./web/imgs/P (30).jpg",
         caption: "A Photo I took during my commute home of the Balintawak Market overlooking Super 8 and a famous condominium that is also visible from my home",
         thumb: "./web/imgs/thumb/P (30).jpg",
+    },
+    {
+        title: "Cubao - Night",
+        image: "./web/imgs/P (31).jpg",
+        caption: "A Photo I took on the rooftop of Chilltop Cubao.",
+        thumb: "./web/imgs/thumb/P (31).jpg",
     }
     
 ];
