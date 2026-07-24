@@ -5,6 +5,58 @@
     margin: 0;
     font-family: "IBM Plex Mono", monospace;
 }
+.flexer {
+    display: flex;
+}
+dialog {
+    /* Visual hidden state */
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+
+    /* Transition opacity, transform, and the display property itself */
+    /* 'allow-discrete' is required to transition display/overlay */
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        display 0.3s ease allow-discrete,
+        overlay 0.3s ease allow-discrete;
+
+    /* Styling */
+    
+}
+
+/* --- Open State --- */
+dialog[open] {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* --- The Magic: @starting-style --- */
+/* This tells the browser what the styles should be 
+   right before the element becomes visible */
+@starting-style {
+    dialog[open] {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+}
+
+/* --- Animating the Backdrop --- */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease, display 0.3s ease allow-discrete, overlay 0.3s ease allow-discrete;
+}
+
+dialog[open]::backdrop {
+    opacity: 1;
+}
+
+@starting-style {
+    dialog[open]::backdrop {
+        opacity: 0;
+    }
+}
 
 .hidden{
     height: 0vh !important;
@@ -97,13 +149,17 @@ header > nav > ul > li > a{
     text-align: center;
 }
 .imageShow{
-    display: flex;
+    
     flex-direction: column;
     width: 99vw;
     height: 90vh;
     background-color: rgb(26, 20, 13);
     overflow: hidden;
     transition: all 0.5s ease-in-out;
+    color:rgb(230, 208, 179);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: auto;
 }
 
 .imageShow > figure{
@@ -177,7 +233,6 @@ header > nav > ul > li > a{
 
 }
 
-
 @media only screen and (max-width: 1024px){
     header{
         flex-direction: column;
@@ -203,6 +258,9 @@ header > nav > ul > li > a{
         max-width: 100%;
         max-height: 70vh;
         
+    }
+    .imageShow>.control {
+        width: 70%;
     }
 }
 

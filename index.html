@@ -21,8 +21,8 @@
 
     <h1 class="title" id="up">Random Photos I've Taken</h1>
     
-    <div class="imageShow hidden">
-        <button class="btnClose hidder">✖</button>
+    <dialog class="imageShow" id="imgModal">
+        <button class="btnClose" commandfor="imgModal" command="close">✖</button>
         <figure id="imgViewer">
             <a href="" target="_blank" rel="noopener noreferrer" class="linker">
                 <img src="" alt="" srcset="" class="mainPic">
@@ -36,7 +36,7 @@
             <h3 class="prev">◀Previous</h3>
             <h3 class="next">Next▶</h3>
         </div>
-    </div>
+    </dialog>
 
     <section class="imgCont">
         <template id="image">

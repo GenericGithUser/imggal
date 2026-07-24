@@ -184,6 +184,30 @@ const photoData = [
         image: "./web/imgs/P (31).jpg",
         caption: "A Photo I took on the rooftop of Chilltop Cubao.",
         thumb: "./web/imgs/thumb/P (31).jpg",
+    },
+    {
+        title: "PUP Open University System Building - Sunset",
+        image: "./web/imgs/P (32).jpg",
+        caption: "No Description",
+        thumb: "./web/imgs/thumb/P (32).jpg",
+    },
+    {
+        title: "PUP Ninoy Aquino Library and Learning Resource Center - Sunset",
+        image: "./web/imgs/P (33).jpg",
+        caption: "No Description",
+        thumb: "./web/imgs/thumb/P (33).jpg",
+    },
+    {
+        title: "Quezon Memorial Shrine",
+        image: "./web/imgs/P (34).jpg",
+        caption: "A Photo I took during a spontaneous hangout of the main Quezon City Symbol",
+        thumb: "./web/imgs/thumb/P (34).jpg",
+    },
+    {
+        title: "Quezon Memorial Shrine - From Afar",
+        image: "./web/imgs/P (35).jpg",
+        caption: "Also taken during a spontaneous hangout, shot on the vantage of the QMC-Wildlife footbridge.",
+        thumb: "./web/imgs/thumb/P (35).jpg",
     }
     
 ];
@@ -220,12 +244,15 @@ function setter(index){
     console.log(index);
     indexer = index;
     if (indexCurr == index) {
-        view.classList.toggle('hidden');
-        closeBtn.classList.add("hidder");
+        setTimeout(()=>{view.classList.remove('flexer')}, 1000);
+        
+        console.log("Triggered");
     }
     else{
         indexCurr = index;
-        view.classList.remove('hidden');
+        view.classList.toggle('flexer');
+        view.showModal();
+        console.log("shown");
     }
     
     
@@ -233,19 +260,13 @@ function setter(index){
     view.querySelector('.title').textContent = photoData[index].title;
     view.querySelector('.description').textContent = photoData[index].caption;
     view.querySelector('.linker').href = photoData[index].image;
-    if (!view.classList.contains('hidden')) {
-        requestAnimationFrame(() => {
-            view.scrollIntoView({ behavior: "smooth" });
-            closeBtn.classList.remove("hidder");
-        });
-    }
+    
 }
 
 
 
 closeBtn.addEventListener("click", ()=>{
-    view.classList.add("hidden");
-    closeBtn.classList.add("hidder");
+    setTimeout(()=>{view.classList.remove('flexer')}, 1000);
 });
 
 
